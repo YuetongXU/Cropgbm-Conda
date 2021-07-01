@@ -3,18 +3,19 @@
 import os
 import codecs
 import subprocess
-import Engine
-import Feature
 import argparse
-import Structure
-import Visualize
 import configparser
 import numpy as np
 import pandas as pd
-import Preprocessed as Pp
 from pandas import read_csv
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
+from cropgbm import Engine
+from cropgbm import Feature
+from cropgbm import Structure
+from cropgbm import Visualize
+from cropgbm import Preprocessed as Pp
+
 
 parser = argparse.ArgumentParser()
 parser.description = 'Crop Genomic Breeding machine (CropGBM) is a program that integrates pre-processing, ' \
