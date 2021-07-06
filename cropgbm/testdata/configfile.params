@@ -3,16 +3,16 @@ output_folder = ./
 
 [preprocessed_geno]
 # necessary
-fileprefix =
-fileformat =
+fileprefix = ./testdata/genofile
+fileformat = ped
 
 # semi-necessary
 
 # optional
 plink_path = 
-keep_sampleid_path =
+keep_sampleid_path = ./testdata/ksampleid_file.txt
 remove_sampleid_path =
-extract_snpid_path =
+extract_snpid_path = ./testdata/ksnpid_file.txt
 exclude_snpid_path =
 snpmaxmiss =
 samplemaxmiss =

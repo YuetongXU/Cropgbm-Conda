@@ -2,8 +2,7 @@ import os
 
 print('Test 1')
 os.system('python main.py -pg all '
-          '--fileprefix ./testdata/genofile '
-          '--plink plink1.9')
+          '--fileprefix ./testdata/genofile')
 
 print('Test 2')
 os.system('python main.py -o ./ -pg all '
@@ -12,23 +11,17 @@ os.system('python main.py -o ./ -pg all '
           '--snpmaxmiss 0.1 '
           '--samplemaxmiss 0.1 '
           '--maf-max 0.05 '
-          '--r2-cutoff 0.7 '
-          '--plink plink1.9')
+          '--r2-cutoff 0.7')
 
 print('Test 3')
 os.system('python main.py -o ./ -pg all '
-          '--fileprefix ./testdata/genofile '
-          '--fileformat ped '
-          '--keep-sampleid-path ./testdata/ksampleid_file.txt '
-          '--extract-snpid-path ./testdata/ksnpid_file.txt '
-          '--plink plink1.9')
+          '-c ./testdata/configfile.params')
 
 print('Test 4')
 os.system('python main.py -o ./ -pg filter '
           '--fileprefix ./testdata/genofile '
           '--remove-sampleid-path ./testdata/ksampleid_file.txt '
-          '--exclude-snpid-path ./testdata/ksnpid_file.txt '
-          '--plink plink1.9')
+          '--exclude-snpid-path ./testdata/ksnpid_file.txt')
 
 print('Test 5')
 os.system("python main.py -pp --phe-plot "
