@@ -4,7 +4,7 @@ from sklearn.decomposition import PCA
 from sklearn.manifold import TSNE
 from sklearn.cluster import OPTICS
 from sklearn.cluster import KMeans
-import Parameters as Param
+from cropgbm import Parameters as Param
 
 
 def calc_ws(geno_data, ws=20):

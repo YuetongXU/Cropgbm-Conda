@@ -5,7 +5,7 @@ import lightgbm as lgb
 from pandas import read_csv
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
-import Parameters as Params
+from cropgbm import Parameters as Params
 
 
 def get_params(user_params):

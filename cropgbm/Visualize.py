@@ -5,7 +5,7 @@ from pandas import read_csv
 from scipy import optimize
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
-import Parameters as Param
+from cropgbm import Parameters as Param
 
 
 colorlist = ['#B22222', '#F08080', '#FF0000', '#006400', '#3CB371', '#2E8B57', '#00FF7F', '#00FF00', '#7FFF00',

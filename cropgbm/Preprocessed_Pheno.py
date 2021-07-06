@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-import Parameters as Params
 import numpy as np
 import pandas as pd
 from pandas import read_csv
 from sklearn import preprocessing
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
+from cropgbm import Parameters as Params
 
 
 def ex_sample(phe_data, user_params):

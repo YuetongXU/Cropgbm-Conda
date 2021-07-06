@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-import Engine
-import Visualize
 import pandas as pd
 from pandas import read_csv
-import Parameters as Params
+from cropgbm import Engine
+from cropgbm import Visualize
+from cropgbm import Parameters as Params
 
 
 def extree_info(model_path, num_boost_round, objective, num_class):

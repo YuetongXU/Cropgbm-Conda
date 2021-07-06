@@ -3,7 +3,7 @@ import os
 import subprocess
 import pandas as pd
 from pandas import read_csv
-import Visualize
+from cropgbm import Visualize
 
 
 # one-hot code

@@ -4,13 +4,13 @@ import os
 import argparse
 import configparser
 from pandas import read_csv
-import Engine
-import Feature
-import Structure
-import Visualize
-import Parameters as Params
-import Preprocessed_Geno as Pg
-import Preprocessed_Pheno as Pp
+from cropgbm import Engine
+from cropgbm import Feature
+from cropgbm import Structure
+from cropgbm import Visualize
+from cropgbm import Parameters as Params
+from cropgbm import Preprocessed_Geno as Pg
+from cropgbm import Preprocessed_Pheno as Pp
 
 
 parser = argparse.ArgumentParser()

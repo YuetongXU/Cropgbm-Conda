@@ -4,9 +4,10 @@ from setuptools import setup, find_packages
 
 setup(
     name='cropgbm',
-    version='1.1.1',
+    version='1.1.2',
     description=(
-        'Crop Genomic Breeding machine (CropGBM) is a multifunctional program that integrates data preprocessing, population structure analysis, SNP selection, phenotype prediction, and data visualization.'
+        'Crop Genomic Breeding machine (CropGBM) is a multifunctional program that integrates data preprocessing, '
+        'population structure analysis, SNP selection, phenotype prediction, and data visualization.'
     ),
     long_description=open('README.md').read(),
     author='Yuetong Xu, Jun Yan',
@@ -14,16 +15,16 @@ setup(
     maintainer='Yuetong Xu',
     maintainer_email='cau_cab_xu@163.com',
     license='MIT License',
-    platforms=["all"],
+    platforms=["linux"],
     url='https://github.com/YuetongXU/CropGBM',
     packages=find_packages(),
-    entry_points = {
+    entry_points={
         'console_scripts': [
-            'cropgbm = cropgbm.kernel:main',
+            'cropgbm = cropgbm.main:main',
         ]
     },
     package_data={
-        'cropgbm': ['configfile.params']
+        'cropgbm': ['testdata/*']
     },
     classifiers=[
         'Operating System :: OS Independent',
@@ -33,13 +34,12 @@ setup(
     python_requires='>=3',
     install_requires=[
         'wheel',
-	'numpy',
-	'scipy',
-	'pandas',
-	'scikit-learn>=0.24',
-	'lightgbm',
-	'matplotlib',
-	'seaborn'
+        'numpy',
+        'scipy',
+        'pandas',
+        'scikit-learn>=0.24',
+        'lightgbm',
+        'matplotlib',
+        'seaborn'
     ]
-
 )
