@@ -1,73 +1,73 @@
 import os
 
 print('Test 1')
-os.system('python main.py -pg all '
-          '--fileprefix ./testdata/genofile')
+os.system('cropgbm -pg all '
+          '--fileprefix ./cropgbm/testdata/genofile')
 
 print('Test 2')
-os.system('python main.py -o ./ -pg all '
-          '--fileprefix ./testdata/genofile '
+os.system('cropgbm -o ./ -pg all '
+          '--fileprefix ./cropgbm/testdata/genofile '
           '--fileformat bed '
           '--snpmaxmiss 0.1 '
           '--samplemaxmiss 0.1 '
           '--maf-max 0.05 '
           '--r2-cutoff 0.7')
-
+#
 print('Test 3')
-os.system('python main.py -o ./ -pg all '
-          '-c ./testdata/configfile.params')
+os.system('cropgbm -o ./ -pg all '
+          '-c ./cropgbm/testdata/configfile.params')
 
 print('Test 4')
-os.system('python main.py -o ./ -pg filter '
-          '--fileprefix ./testdata/genofile '
-          '--remove-sampleid-path ./testdata/ksampleid_file.txt '
-          '--exclude-snpid-path ./testdata/ksnpid_file.txt')
+os.system('cropgbm -o ./ -pg filter '
+          '--fileprefix ./cropgbm/testdata/genofile '
+          '--remove-sampleid-path ./cropgbm/testdata/ksampleid_file.txt '
+          '--exclude-snpid-path ./cropgbm/testdata/ksnpid_file.txt')
 
 print('Test 5')
-os.system("python main.py -pp --phe-plot "
-          "--phefile-path ./testdata/phefile.txt "
+os.system("cropgbm -pp --phe-plot "
+          "--phefile-path ./cropgbm/testdata/phefile.txt "
           "--phe-name DTT")
 
 print('Test 6')
-os.system("python main.py -pp "
-          "--phefile-path ./testdata/phefile.txt "
+os.system("cropgbm -pp "
+          "--phefile-path ./cropgbm/testdata/phefile.txt "
           "--phe-name DTT "
           "--phefile-sep ',' "
-          "--ppexsampleid-path ./testdata/ksampleid_file.txt "
+          "--ppexsampleid-path ./cropgbm/testdata/ksampleid_file.txt "
           "--phe-norm")
 
 print('Test 7')
-os.system("python main.py -pp --phe-plot "
-          "--phefile-path ./testdata/phefile.txt "
+os.system("cropgbm -pp --phe-plot "
+          "--phefile-path ./cropgbm/testdata/phefile.txt "
           "--phe-name DTT "
-          "--ppgroupfile-path ./testdata/phefile.txt "
+          "--ppgroupfile-path ./cropgbm/testdata/phefile.txt "
           "--ppgroupfile-sep ',' "
           "--ppgroupid-name paternal_line")
 
 print('Test 8')
-os.system("python main.py -pp "
-          "--phefile-path ./testdata/phefile.txt "
+os.system("cropgbm -pp "
+          "--phefile-path ./cropgbm/testdata/phefile.txt "
           "--phe-name DTT "
           "--phe-norm "
-          "--ppgroupfile-path ./testdata/phefile.txt "
+          "--ppgroupfile-path ./cropgbm/testdata/phefile.txt "
           "--ppgroupfile-sep ',' "
           "--ppgroupid-name paternal_line")
 
 print('Test 9')
-os.system("python main.py -pp "
-          "--phefile-path ./testdata/phefile.txt "
+os.system("cropgbm -pp "
+          "--phefile-path ./cropgbm/testdata/phefile.txt "
           "--phe-name pop_class "
           "--phe-recode word2num")
 
 print('Test 10')
-os.system("python main.py -pp "
+os.system("cropgbm -pp "
           "--phefile-path ./preprocessed/phefile.numphe "
           "--phe-name phe "
           "--phe-recode num2word "
           "--num2wordfile-path ./preprocessed/phefile.word2num")
 
 print('Test 11')
-os.system("python main.py -s "
+os.system("cropgbm -s "
           "--genofile-path ./preprocessed/genofile_filter.geno "
           "--structure-plot "
           "--redim-mode pca "
@@ -76,7 +76,7 @@ os.system("python main.py -s "
           "--n-clusters 30")
 
 print('Test 12')
-os.system("python main.py -s "
+os.system("cropgbm -s "
           "--genofile-path ./preprocessed/genofile_filter.geno "
           "--structure-plot "
           "--redim-mode tsne "
@@ -87,7 +87,7 @@ os.system("python main.py -s "
           "--optics-min-cluster-size 0.03")
 
 print('Test 13')
-os.system("python main.py -s "
+os.system("cropgbm -s "
           "--genofile-path ./preprocessed/genofile_filter.geno "
           "--structure-plot "
           "--redim-mode tsne "
@@ -96,21 +96,21 @@ os.system("python main.py -s "
           "--optics-min-sample 0.025 "
           "--optics-xi 0.01 "
           "--optics-min-cluster-size 0.03 "
-          "--sgroupfile-path ./testdata/phefile.txt "
+          "--sgroupfile-path ./cropgbm/testdata/phefile.txt "
           "--sgroupfile-sep ',' "
           "--sgroupid-name paternal_line")
 
 print('Test 14')
-os.system("python main.py -e -cv "
-          "--traingeno ./testdata/train.geno "
-          "--trainphe ./testdata/train.phe "
+os.system("cropgbm -e -cv "
+          "--traingeno ./cropgbm/testdata/train.geno "
+          "--trainphe ./cropgbm/testdata/train.phe "
           "--cv-nfold 5 "
           "--min-detal 0.5")
 
 print('Test 15')
-os.system("python main.py -e -cv "
-          "--traingeno ./testdata/train.geno "
-          "--trainphe ./testdata/train_class.phe "
+os.system("cropgbm -e -cv "
+          "--traingeno ./cropgbm/testdata/train.geno "
+          "--trainphe ./cropgbm/testdata/train_class.phe "
           "--cv-nfold 5 "
           "--min-detal 0.5 "
           "--objective multiclass "
@@ -119,31 +119,31 @@ os.system("python main.py -e -cv "
           "--num-leaves 5")
 
 print('Test 16')
-os.system("python main.py -e -t "
-          "--traingeno ./testdata/train.geno "
-          "--trainphe ./testdata/train.phe "
-          "--validgeno ./testdata/valid.geno "
-          "--validphe ./testdata/valid.phe")
+os.system("cropgbm -e -t "
+          "--traingeno ./cropgbm/testdata/train.geno "
+          "--trainphe ./cropgbm/testdata/train.phe "
+          "--validgeno ./cropgbm/testdata/valid.geno "
+          "--validphe ./cropgbm/testdata/valid.phe")
 
 print('Test 17')
-os.system("python main.py -e -t -sf "
+os.system("cropgbm -e -t -sf "
           "--bygain-boxplot "
-          "--traingeno ./testdata/train.geno "
-          "--trainphe ./testdata/train.phe "
+          "--traingeno ./cropgbm/testdata/train.geno "
+          "--trainphe ./cropgbm/testdata/train.phe "
           "--min-gain 0.05 "
           "--max-colorbar 0.6 "
           "--cv-times 3")
 
 print('Test 18')
-os.system("python main.py -e -p "
-          "--testgeno ./testdata/test.geno "
+os.system("cropgbm -e -p "
+          "--testgeno ./cropgbm/testdata/test.geno "
           "--modelfile-path ./engine/train.lgb_model")
 
 print('Test 19')
-os.system("python main.py -e -t -sf "
+os.system("cropgbm -e -t -sf "
           "--bygain-boxplot "
-          "--traingeno ./testdata/train.geno "
-          "--trainphe ./testdata/train_class.phe "
+          "--traingeno ./cropgbm/testdata/train.geno "
+          "--trainphe ./cropgbm/testdata/train_class.phe "
           "--min-gain 0.05 "
           "--max-colorbar 0.6 "
           "--cv-times 3 "
@@ -153,14 +153,13 @@ os.system("python main.py -e -t -sf "
           "--num-leaves 5")
 
 print('Test 20')
-os.system("python main.py -e -p "
-          "--testgeno ./testdata/test.geno "
+os.system("cropgbm -e -p "
+          "--testgeno ./cropgbm/testdata/test.geno "
           "--modelfile-path ./engine/train.lgb_model "
           "--objective multiclass")
 
 print('Test is complete!')
 print('Delete temporary files used for test')
 os.system('rm -rf preprocessed/ structure/ engine/')
-
 
 

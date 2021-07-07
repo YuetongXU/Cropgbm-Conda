@@ -31,15 +31,5 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3'
     ],
-    python_requires='>=3',
-    install_requires=[
-        'wheel',
-        'numpy',
-        'scipy',
-        'pandas',
-        'scikit-learn>=0.24',
-        'lightgbm',
-        'matplotlib',
-        'seaborn'
-    ]
+    python_requires='>=3'
 )
