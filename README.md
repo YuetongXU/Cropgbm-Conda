@@ -14,7 +14,7 @@ Crop Genomic Breeding machine (CropGBM) is a multifunctional program that integr
 
 *Download link*: [https://github.com/YuetongXU/CropGBM](https://github.com/YuetongXU/CropGBM)
 
-*Cite*:
+*Cite*: *Jun Yan, Yuetong Xu, Qian Cheng, Shuqin Jiang, Qian Wang, Yingjie Xiao, Chuang Ma, Jianbing Yan and Xiangfeng Wang. LightGBM: accelerated genomically-designed crop breeding via ensemble learning.*
 
 *Contact us*: cropgbm@163.com
 
