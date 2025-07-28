@@ -1,0 +1,37 @@
+package:
+  name: cropgbm
+  version: 1.1.7
+	
+source:
+  path: /ldata/xyt/Cropgbm/cropgbm_conda/Cropgbm-Conda/
+	 
+build:
+  number: 0
+	
+requirements:
+  build:
+    - python >=3.8,<=3.11
+    - setuptools
+  run:
+    - python >=3.8,<=3.11
+    - numpy >=1.26.0,<2.0.0
+    - scipy >=1.7.0
+    - pandas >=1.3.0
+    - scikit-learn >=0.24.2
+    - lightgbm >=3.3.0,<4.0.0
+    - matplotlib >=3.4.0
+    - seaborn >=0.11.0
+    - plink >=1.9
+
+test:
+  source_files:
+    - cropgbm/run_test.py
+    - cropgbm/testdata/*
+
+about:
+  home: https://github.com/YuetongXU/CropGBM
+  license: MIT
+  summary: SNP data preprocessing, population structure analysis, SNP selection, phenotype prediction, and data visualization
+  description: Crop Genomic Breeding machine (CropGBM) is a multifunctional program that integrates SNP data preprocessing, population structure analysis, SNP selection, phenotype prediction, and data visualization.
+  doc_url: https://ibreeding.github.io/
+  dev_url: https://github.com/YuetongXU/CropGBM
